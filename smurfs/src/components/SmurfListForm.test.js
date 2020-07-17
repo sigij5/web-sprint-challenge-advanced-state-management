@@ -1,9 +1,10 @@
 import React from 'react'
+import { SmurfsList } from '../components/SmurfsList'
 import { render, screen, fireEvent } from '@testing-library/react'
 
 
 test('ContactForm adds new contact to the list', () => {
-    render(<SmurfList />);
+    render(<SmurfsList />);
 
     const nameInput = screen.getByLabelText(/name/i);
     const heightInput = screen.getByLabelText(/height/i);

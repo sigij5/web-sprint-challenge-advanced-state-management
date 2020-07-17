@@ -14,9 +14,7 @@ class App extends Component {
         <header>
           <NavLink className='title' to='/'><h1>Welcome to Smurf Village</h1></NavLink>
         </header>
-        <Route exact path='/'>
           <SmurfsList />
-        </Route>
 
         {/* <Route exact path='/'{}>
 

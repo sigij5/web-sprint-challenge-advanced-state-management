@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { NavLink, Router } from 'react-router-dom'
 
@@ -34,15 +34,21 @@ import { Smurf } from '../components/Smurf'
     const addNewSmurf = e => {
         e.preventDefault();
         props.addSmurf(newSmurf)
+        setSmurfValues(newSmurfValues)
+
         
     }
+
+            useEffect(() => {
+            getSmurfs();
+        });
 
 
         return(
             <div className='app-body'>
                 <h2 className='meet' onClick={fetchSmurfs}>Meet the Smurfs!</h2>
-                <form onSubmit={addNewSmurf, fetchSmurfs}>
-                <h4>Add a smurf to the village:</h4>
+                <form onSubmit={addNewSmurf}>
+                    <h4>Add a smurf to the village:</h4>
                     <label>Name&nbsp;
                         <input
                             type='text'

@@ -19,7 +19,7 @@ export const getSmurfs = () => dispatch => {
 
 export const addSmurf = newSmurf => dispatch => {
     console.log('action', newSmurf);
-    // dispatch({ type: ADD_SMURF, payload: newSmurf });
+    dispatch({ type: ADD_SMURF });
     axios
     .post('http://localhost:3333/smurfs', newSmurf)
     .then(
