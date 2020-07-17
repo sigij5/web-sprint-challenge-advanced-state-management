@@ -35,13 +35,12 @@ import { Smurf } from '../components/Smurf'
         e.preventDefault();
         props.addSmurf(newSmurf)
         setSmurfValues(newSmurfValues)
-
-        
+        // props.getSmurfs();
     }
 
-            useEffect(() => {
-            getSmurfs();
-        });
+    // useEffect(() => {
+    //     props.getSmurfs();
+    // },[props.smurfs.length])
 
 
         return(
